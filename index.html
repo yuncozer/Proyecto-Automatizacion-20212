@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Cavas de Refrigeración</title>
+  </head>
+<!-------------------------------ENCABEZADO------------------------------------------->
+
+  <body class="d-felx h-100 text-center justify-content-center">
+    <div class="container-fluid bg-light">
+        <div class="row justify-content-md-center mt-3">
+            <div class="col">
+                <h1 class="text-primary">CAVAS DE REFRIGERACIÓN</h1>
+            </div>    
+        </div>
+    </div>
+<!--------------------------------MANOMETROS----------------------------------->
+    <div class="container-fluid bg-primary">
+        <div class="row justify-content-md-center mt-3 pt-5 pb-5">
+            <div class="col-6 mx-auto">
+               <h2 class="text-light">TEMPERATURAS</h2>
+               <h4 class="text-light">(Ultima medición)</h4>
+            </div>    
+        </div>
+        <div class="row pb-2">
+            <div class="col-sm-3">
+              <div class="gauge" id="chart_Temp1"></div>     
+            </div>
+            <div class="col-sm-3">
+              <div class="gauge" id="chart_Temp2"></div>     
+            </div>
+            <div class="col-sm-3">
+              <div class="gauge" id="chart_Temp3"></div>     
+            </div>
+            <div class="col-sm-3">
+              <div class="gauge" id="chart_Temp4"></div>     
+            </div>
+        </div>
+    </div>
+<!---------------------------------GRAFICAS----------------------------------->
+    <div class="container">
+        <h2 class="text-primary mt-5">GRAFICAS</h2>
+        <div class="col gap-2 d-md-block mt-2">
+            <button id="bt1" class="btn btn-primary" type="button">Therm 1</button>
+            <button id="bt2" class="btn btn-primary" type="button">Therm 2</button>
+            <button id="bt3" class="btn btn-primary" type="button">Therm 3</button>
+            <button id="bt4" class="btn btn-primary" type="button">Therm 4</button>           
+        </div>
+        <div class="row ">
+          <div class="col" id="curve_chart" style="width: 900px; height: 500px">
+            <h2><br><br>Seleccione una opción para visualizar el comportamiento<br>de cada Termostato en al menos sus ultimas 200 mediciones</h2>
+          </div>
+        </div>
+    </div>
+<!---------------------------------FOOTER----------------------------------->
+
+    <footer class="footer mt-auto py-3 bg-primary">
+      <div class="container">
+        <span class="text-light">by Daniel Cárdenas - C.I. V-21.220.240</span>
+      </div>
+    </footer>
+<!---------------------------------CDN BOOTSTRAP----------------------------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous">
+    </script>
+  
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    
+    
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCjLwHgSsOZX1lz1jBir3OSKN5pY0akeUs",
+      authDomain: "smartcool-5cc31.firebaseapp.com",
+      projectId: "smartcool-5cc31",
+      storageBucket: "smartcool-5cc31.appspot.com",
+      messagingSenderId: "464765976937",
+      appId: "1:464765976937:web:bd293f2e760dddf3fcfdf8"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+<!--------------------------------APP.JS----------------------------------->
+
+  <script type="text/javascript" src="app.js"></script>
+
+  </body>
+  
+</html>
